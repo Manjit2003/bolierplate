@@ -83,14 +83,16 @@ export const {{cookiecutter.entity_name}}ListTable: FC<{{cookiecutter.entity_nam
   return (
     <div {...other}>
       <Box
+        {% raw %}
         sx={{
-          backgroundColor: (theme) => theme.palette.mode {{ "===" }} 'dark'
+          backgroundColor: (theme) => theme.palette.mode == 'dark'
             ? 'neutral.800'
             : 'neutral.100',
           display: enableBulkActions ? 'block' : 'none',
           px: 2,
           py: 0.5
         }}
+        {% endraw %}
       >
         <Checkbox
           checked={selectedAll{{cookiecutter.entity_name}}s}
