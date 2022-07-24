@@ -65,6 +65,8 @@ export const {{cookiecutter.entity_name}}Payment: FC = (props) => {
           m: -1
         }}
       >
+                                    {% raw %}
+
         <Button
           sx={{ m: 1 }}
           variant="outlined"
@@ -74,6 +76,8 @@ export const {{cookiecutter.entity_name}}Payment: FC = (props) => {
         <Button sx={{ m: 1 }}>
           Resend Due Invoices
         </Button>
+                                    {% endraw %}
+
       </CardActions>
     </Card>
   );

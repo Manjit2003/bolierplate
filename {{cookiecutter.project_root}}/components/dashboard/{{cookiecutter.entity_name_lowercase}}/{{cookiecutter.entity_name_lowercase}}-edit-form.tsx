@@ -203,12 +203,16 @@ export const {{cookiecutter.entity_name}}EditForm: FC<{{cookiecutter.entity_name
             </Grid>
           </Grid>
           <Box
+                            {% raw %}
+
             sx={{
               alignItems: 'center',
               display: 'flex',
               justifyContent: 'space-between',
               mt: 3
             }}
+                            {% endraw %}
+
           >
             <div>
               <Typography
@@ -220,6 +224,8 @@ export const {{cookiecutter.entity_name}}EditForm: FC<{{cookiecutter.entity_name
               <Typography
                 color="textSecondary"
                 variant="body2"
+                                {% raw %}
+
                 sx={{ mt: 1 }}
               >
                 Means that anyone viewing your profile will be able to see your contacts
@@ -243,6 +249,7 @@ export const {{cookiecutter.entity_name}}EditForm: FC<{{cookiecutter.entity_name
               justifyContent: 'space-between'
             }}
           >
+
             <div>
               <Typography
                 gutterBottom
@@ -255,6 +262,8 @@ export const {{cookiecutter.entity_name}}EditForm: FC<{{cookiecutter.entity_name
                 variant="body2"
                 sx={{ mt: 1 }}
               >
+                                            {% endraw %}
+
                 Toggling this will let your teammates know that you are available for
                 acquiring new projects
               </Typography>
@@ -270,6 +279,8 @@ export const {{cookiecutter.entity_name}}EditForm: FC<{{cookiecutter.entity_name
           </Box>
         </CardContent>
         <CardActions
+                                      {% raw %}
+
           sx={{
             flexWrap: 'wrap',
             m: -1
@@ -296,6 +307,8 @@ export const {{cookiecutter.entity_name}}EditForm: FC<{{cookiecutter.entity_name
               }}
               variant="outlined"
             >
+                                          {% endraw %}
+
               Cancel
             </Button>
           </NextLink>

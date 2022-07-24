@@ -284,7 +284,9 @@ const {{cookiecutter.entity_name}}List: NextPage = () => {
         }}
       >
         <Container maxWidth="xl">
+          {% raw %}
           <Box sx={{ mb: 4 }}>
+            {% endraw %}
             <Grid container justifyContent="space-between" spacing={3}>
               <Grid item>
                 <Typography variant="h4">{{cookiecutter.entity_name}}s</Typography>
@@ -304,12 +306,15 @@ const {{cookiecutter.entity_name}}List: NextPage = () => {
                 mt: 3,
               }}
             >
+              {% raw %}
               <Button startIcon={<UploadIcon fontSize="small" />} sx={{ m: 1 }}>
                 Import
               </Button>
               <Button
                 startIcon={<DownloadIcon fontSize="small" />}
                 sx={{ m: 1 }}
+                {% endraw %}
+
               >
                 Export
               </Button>
@@ -319,7 +324,8 @@ const {{cookiecutter.entity_name}}List: NextPage = () => {
             <Tabs
               indicatorColor="primary"
               onChange={handleTabsChange}
-              scrollButtons="auto"
+              scrollButtons="auto"          
+              {% endraw %}
               sx={{ px: 3 }}
               textColor="primary"
               value={currentTab}
@@ -358,6 +364,7 @@ const {{cookiecutter.entity_name}}List: NextPage = () => {
                       </InputAdornment>
                     ),
                   }}
+                  {% endraw %}
                   placeholder="Search {{cookiecutter.entity_name_lowercase}}s"
                 />
               </Box>
@@ -366,8 +373,10 @@ const {{cookiecutter.entity_name}}List: NextPage = () => {
                 name="sort"
                 onChange={handleSortChange}
                 select
+                {% raw %}
                 SelectProps={{ native: true }}
                 sx={{ m: 1.5 }}
+                {% endraw %}
                 value={sort}
               >
                 {sortOptions.map((option) => (

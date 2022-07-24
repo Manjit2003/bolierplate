@@ -43,7 +43,11 @@ export const {{cookiecutter.entity_name}}Logs: FC = (props) => {
       <CardHeader action={<MoreMenu />} title="Recent Logs" />
       <Divider />
       <Scrollbar>
+                                    {% raw %}
+
         <Table sx={{ minWidth: 700 }}>
+                                      {% endraw %}
+
           <TableBody>
             {logs.map((log) => (
               <TableRow key={log.id}>

@@ -64,6 +64,7 @@ export const {{cookiecutter.entity_name}}BasicDetails: FC<{{cookiecutter.entity_
         />
       </PropertyList>
       <CardActions
+      {% raw %}
         sx={{
           flexWrap: 'wrap',
           px: 3,
@@ -78,6 +79,8 @@ export const {{cookiecutter.entity_name}}BasicDetails: FC<{{cookiecutter.entity_
           Reset &amp; Send Password
         </Button>
         <Button sx={{ m: 1 }}>
+                {% endraw %}
+
           Login as {{cookiecutter.entity_name}}
         </Button>
       </CardActions>

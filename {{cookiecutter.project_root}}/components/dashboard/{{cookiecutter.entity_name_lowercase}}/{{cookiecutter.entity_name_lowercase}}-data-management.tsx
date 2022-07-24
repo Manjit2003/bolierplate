@@ -12,7 +12,11 @@ export const {{cookiecutter.entity_name}}DataManagement: FC = (props) => (
       >
         Delete Account
       </Button>
+                      {% raw %}
+
       <Box sx={{ mt: 1 }}>
+                        {% endraw %}
+
         <Typography
           color="textSecondary"
           variant="body2"

@@ -97,6 +97,8 @@ export const {{cookiecutter.entity_name}}ListTable: FC<{{cookiecutter.entity_nam
           indeterminate={selectedSome{{cookiecutter.entity_name}}s}
           onChange={handleSelectAll{{cookiecutter.entity_name}}s}
         />
+                                    {% raw %}
+
         <Button
           size="small"
           sx={{ ml: 2 }}
@@ -114,6 +116,8 @@ export const {{cookiecutter.entity_name}}ListTable: FC<{{cookiecutter.entity_nam
         <Table sx={{ minWidth: 700 }}>
           <TableHead sx={{ visibility: enableBulkActions ? 'collapse' : 'visible' }}>
             <TableRow>
+                                          {% endraw %}
+
               <TableCell padding="checkbox">
                 <Checkbox
                   checked={selectedAll{{cookiecutter.entity_name}}s}
@@ -173,8 +177,12 @@ export const {{cookiecutter.entity_name}}ListTable: FC<{{cookiecutter.entity_nam
                         }}
                       >
                         {getInitials({{cookiecutter.entity_name_lowercase}}.name)}
-                      </Avatar>
-                      <Box sx={{ ml: 1 }}>
+              </Avatar>
+                                          {% raw %}
+
+              <Box sx={{ ml: 1 }}>
+                                            {% endraw %}
+
                         <NextLink
                           href="/dashboard/{{cookiecutter.entity_name_lowercase}}s/1"
                           passHref

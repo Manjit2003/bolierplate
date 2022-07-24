@@ -47,7 +47,11 @@ export const {{cookiecutter.entity_name}}Invoices: FC = (props) => {
       <CardHeader action={<MoreMenu />} title="Recent Invoices" />
       <Divider />
       <Scrollbar>
+                                    {% raw %}
+
         <Table sx={{ minWidth: 600 }}>
+                                      {% endraw %}
+
           <TableHead>
             <TableRow>
               <TableCell>ID</TableCell>

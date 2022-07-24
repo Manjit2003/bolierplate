@@ -90,6 +90,7 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
       >
         <Container maxWidth="md">
           <div>
+            {% raw %}
             <Box sx={{ mb: 4 }}>
               <NextLink href="/dashboard/{{cookiecutter.entity_name_lowercase}}s" passHref>
                 <Link
@@ -101,6 +102,7 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
                   }}
                 >
                   <ArrowBackIcon fontSize="small" sx={{ mr: 1 }} />
+                  {% endraw %}
                   <Typography variant="subtitle2">{{cookiecutter.entity_name}}s</Typography>
                 </Link>
               </NextLink>
@@ -131,16 +133,19 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
                       display: "flex",
                       alignItems: "center",
                     }}
-                  >
-                    <Typography variant="subtitle2">user_id:</Typography>
-                    <Chip label={{{cookiecutter.entity_name_lowercase}}.id} size="small" sx={{ ml: 1 }} />
+                >
+                  {% raw %}
+                  <Typography variant="subtitle2" sx={{ mr: 1 }}>user_id:</Typography>
+                  {% endraw %}
+                    <Chip label={{{cookiecutter.entity_name_lowercase}}.id} size="small" />
                   </Box>
                 </div>
               </Grid>
               <Grid item sx={{ m: -1 }}>
                 <NextLink href="/dashboard/{{cookiecutter.entity_name_lowercase}}s/1/edit" passHref>
                   <Button
-                    component="a"
+                  component="a"
+                  {% raw %}
                     endIcon={<PencilAltIcon fontSize="small" />}
                     sx={{ m: 1 }}
                     variant="outlined"
@@ -150,7 +155,8 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
                 </NextLink>
                 <Button
                   endIcon={<ChevronDownIcon fontSize="small" />}
-                  sx={{ m: 1 }}
+                sx={{ m: 1 }}
+                
                   variant="contained"
                 >
                   Actions
@@ -175,7 +181,8 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
           <Box sx={{ mt: 3 }}>
             {currentTab === "details" && (
               <Grid container spacing={3}>
-                <Grid item xs={12}>
+              <Grid item xs={12}>
+                {% endraw %}
                   <{{cookiecutter.entity_name}}BasicDetails
                     address1={{{cookiecutter.entity_name_lowercase}}.address1}
                     address2={{{cookiecutter.entity_name_lowercase}}.address2}

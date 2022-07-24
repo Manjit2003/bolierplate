@@ -58,8 +58,11 @@ const {{cookiecutter.entity_name}}Edit: NextPage = () => {
           py: 8,
         }}
       >
+                                    {% raw %}
+
         <Container maxWidth="md">
           <Box sx={{ mb: 4 }}>
+            {% endraw %}
             <NextLink href="/dashboard/{{cookiecutter.entity_name_lowercase}}s" passHref>
               <Link
                 color="textPrimary"
@@ -69,7 +72,9 @@ const {{cookiecutter.entity_name}}Edit: NextPage = () => {
                   display: "flex",
                 }}
               >
+                {% raw %}
                 <ArrowBackIcon fontSize="small" sx={{ mr: 1 }} />
+                {% endraw %}
                 <Typography variant="subtitle2">{{cookiecutter.entity_name}}s</Typography>
               </Link>
             </NextLink>
@@ -103,9 +108,11 @@ const {{cookiecutter.entity_name}}Edit: NextPage = () => {
                   textOverflow: "ellipsis",
                   whiteSpace: "nowrap",
                 }}
-              >
-                <Typography variant="subtitle2">user_id:</Typography>
-                <Chip label={{{cookiecutter.entity_name_lowercase}}.id} size="small" sx={{ ml: 1 }} />
+            >
+              {% raw %}
+              <Typography variant="subtitle2" sx={{ mr: 1 }}>user_id:</Typography>
+              {% endraw %}
+                <Chip label={{{cookiecutter.entity_name_lowercase}}.id} size="small" />
               </Box>
             </div>
           </Box>

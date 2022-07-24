@@ -56,7 +56,11 @@ export const {{cookiecutter.entity_name}}EmailsSummary: FC = (props) => {
         <TextField
           name="option"
           onChange={(event): void => setEmailOption(event.target.value)}
+
           select
+
+          {% raw %}
+
           SelectProps={{ native: true }}
           sx={{
             width: 320,
@@ -103,5 +107,7 @@ export const {{cookiecutter.entity_name}}EmailsSummary: FC = (props) => {
         </TableBody>
       </Table>
     </Card>
+                                {% endraw %}
+
   );
 };
