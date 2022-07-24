@@ -84,7 +84,7 @@ export const {{cookiecutter.entity_name}}ListTable: FC<{{cookiecutter.entity_nam
     <div {...other}>
       <Box
         sx={{
-          backgroundColor: (theme) => theme.palette.mode === 'dark'
+          backgroundColor: (theme) => theme.palette.mode {{ "===" }} 'dark'
             ? 'neutral.800'
             : 'neutral.100',
           display: enableBulkActions ? 'block' : 'none',
