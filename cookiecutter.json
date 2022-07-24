@@ -1,4 +1,5 @@
 {
   "entity_name": "Managers",
-  "entity_name_lowercase": "managers"
+  "entity_name_lowercase": "managers",
+  "project_root": "src"
 }
