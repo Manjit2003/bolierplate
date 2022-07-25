@@ -278,10 +278,12 @@ const {{cookiecutter.entity_name}}List: NextPage = () => {
       </Head>
       <Box
         component="main"
+        {% raw %}
         sx={{
           flexGrow: 1,
           py: 8,
         }}
+        {% endraw %}
       >
         <Container maxWidth="xl">
           {% raw %}
@@ -325,7 +327,7 @@ const {{cookiecutter.entity_name}}List: NextPage = () => {
               indicatorColor="primary"
               onChange={handleTabsChange}
               scrollButtons="auto"          
-              {% endraw %}
+              {% raw %}
               sx={{ px: 3 }}
               textColor="primary"
               value={currentTab}
