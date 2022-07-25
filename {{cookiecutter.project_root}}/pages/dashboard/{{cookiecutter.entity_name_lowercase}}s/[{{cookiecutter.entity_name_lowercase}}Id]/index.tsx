@@ -82,6 +82,7 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
         <title>Dashboard: {{cookiecutter.entity_name}} Details | Material Kit Pro</title>
       </Head>
       <Box
+        {% raw %}
         component="main"
         sx={{
           flexGrow: 1,
@@ -90,7 +91,7 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
       >
         <Container maxWidth="md">
           <div>
-            {% raw %}
+            
             <Box sx={{ mb: 4 }}>
               <NextLink href="/dashboard/{{cookiecutter.entity_name_lowercase}}s" passHref>
                 <Link
@@ -109,6 +110,7 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
             </Box>
             <Grid container justifyContent="space-between" spacing={3}>
               <Grid
+                {% raw %}
                 item
                 sx={{
                   alignItems: "center",
@@ -116,32 +118,38 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
                   overflow: "hidden",
                 }}
               >
+                {% endraw %}
                 <Avatar
                   src={ {{cookiecutter.entity_name_lowercase}}.avatar}
+              {% raw %}
                   sx={{
                     height: 64,
                     mr: 2,
                     width: 64,
-                  }}
+                }}
+                {% endraw %}
                 >
                   {getInitials({{cookiecutter.entity_name_lowercase}}.name)}
                 </Avatar>
                 <div>
-                  <Typography variant="h4">{ {{cookiecutter.entity_name_lowercase}}.email}</Typography>
+                <Typography variant="h4">{{{cookiecutter.entity_name_lowercase}}.email}</Typography>
+                {% raw %}
                   <Box
                     sx={{
                       display: "flex",
                       alignItems: "center",
                     }}
                 >
-                  {% raw %}
+                  
                   <Typography variant="subtitle2" sx={{ mr: 1 }}>user_id:</Typography>
                   {% endraw %}
                     <Chip label={ {{cookiecutter.entity_name_lowercase}}.id} size="small" />
                   </Box>
                 </div>
-              </Grid>
-              <Grid item sx={{ m: -1 }}>
+            </Grid>
+            {% raw %}
+            <Grid item sx={{ m: -1 }}>
+              {% endraw %}
                 <NextLink href="/dashboard/{{cookiecutter.entity_name_lowercase}}s/1/edit" passHref>
                   <Button
                   component="a"
