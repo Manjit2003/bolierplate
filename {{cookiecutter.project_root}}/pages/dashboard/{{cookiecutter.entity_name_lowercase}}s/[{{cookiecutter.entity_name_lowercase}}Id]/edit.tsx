@@ -51,12 +51,14 @@ const {{cookiecutter.entity_name}}Edit: NextPage = () => {
         <title>Dashboard: {{cookiecutter.entity_name}} Edit | Material Kit Pro</title>
       </Head>
       <Box
+        {% raw %}
         component="main"
         sx={{
           backgroundColor: "background.default",
           flexGrow: 1,
           py: 8,
         }}
+        {% endraw %}
       >
                                     {% raw %}
 
@@ -80,27 +82,32 @@ const {{cookiecutter.entity_name}}Edit: NextPage = () => {
             </NextLink>
           </Box>
           <Box
+            {% raw %}
             sx={{
               alignItems: "center",
               display: "flex",
               overflow: "hidden",
             }}
+            {% endraw %}
           >
             <Avatar
               src={{{cookiecutter.entity_name_lowercase}}.avatar}
+          {% raw %}
               sx={{
                 height: 64,
                 mr: 2,
                 width: 64,
-              }}
+            }}
+            {% endraw %}
             >
               {getInitials({{cookiecutter.entity_name_lowercase}}.name)}
             </Avatar>
             <div>
               <Typography noWrap variant="h4">
-                {{{cookiecutter.entity_name_lowercase}}.email}
+                { {{cookiecutter.entity_name_lowercase}}.email}
               </Typography>
-              <Box
+            <Box
+              {% raw %}
                 sx={{
                   alignItems: "center",
                   display: "flex",
@@ -109,7 +116,7 @@ const {{cookiecutter.entity_name}}Edit: NextPage = () => {
                   whiteSpace: "nowrap",
                 }}
             >
-              {% raw %}
+              
               <Typography variant="subtitle2" sx={{ mr: 1 }}>user_id:</Typography>
               {% endraw %}
                 <Chip label={{{cookiecutter.entity_name_lowercase}}.id} size="small" />
