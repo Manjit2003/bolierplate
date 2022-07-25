@@ -120,12 +120,12 @@ const {{cookiecutter.entity_name}}Edit: NextPage = () => {
               
               <Typography variant="subtitle2" sx={{ mr: 1 }}>user_id:</Typography>
               {% endraw %}
-                <Chip label={{{cookiecutter.entity_name_lowercase}}.id} size="small" />
+                <Chip label={ {{cookiecutter.entity_name_lowercase}}.id} size="small" />
               </Box>
             </div>
           </Box>
           <Box mt={3}>
-            <{{cookiecutter.entity_name}}EditForm {{cookiecutter.entity_name_lowercase}}={{{cookiecutter.entity_name_lowercase}}} />
+            <{{cookiecutter.entity_name}}EditForm {{cookiecutter.entity_name_lowercase}}={ {{cookiecutter.entity_name_lowercase}}} />
           </Box>
         </Container>
       </Box>
