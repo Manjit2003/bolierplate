@@ -132,7 +132,7 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
                   {getInitials({{cookiecutter.entity_name_lowercase}}.name)}
                 </Avatar>
                 <div>
-                <Typography variant="h4">{{{cookiecutter.entity_name_lowercase}}.email}</Typography>
+                <Typography variant="h4">{ {{cookiecutter.entity_name_lowercase}}.email}</Typography>
                 {% raw %}
                   <Box
                     sx={{
