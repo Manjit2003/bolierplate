@@ -92,7 +92,7 @@ const {{cookiecutter.entity_name}}Edit: NextPage = () => {
             {% endraw %}
           >
             <Avatar
-              src={{{cookiecutter.entity_name_lowercase}}.avatar}
+              src={ {{cookiecutter.entity_name_lowercase}}.avatar}
           {% raw %}
               sx={{
                 height: 64,
