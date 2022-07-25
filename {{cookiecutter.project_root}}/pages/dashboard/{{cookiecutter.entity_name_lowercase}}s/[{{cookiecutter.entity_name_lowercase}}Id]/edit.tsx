@@ -66,6 +66,7 @@ const {{cookiecutter.entity_name}}Edit: NextPage = () => {
           <Box sx={{ mb: 4 }}>
             {% endraw %}
             <NextLink href="/dashboard/{{cookiecutter.entity_name_lowercase}}s" passHref>
+              {% raw %}
               <Link
                 color="textPrimary"
                 component="a"
@@ -74,7 +75,7 @@ const {{cookiecutter.entity_name}}Edit: NextPage = () => {
                   display: "flex",
                 }}
               >
-                {% raw %}
+                
                 <ArrowBackIcon fontSize="small" sx={{ mr: 1 }} />
                 {% endraw %}
                 <Typography variant="subtitle2">{{cookiecutter.entity_name}}s</Typography>
