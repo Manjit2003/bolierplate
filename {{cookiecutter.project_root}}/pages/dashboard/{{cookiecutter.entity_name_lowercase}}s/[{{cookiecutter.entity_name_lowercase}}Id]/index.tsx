@@ -117,7 +117,7 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
                 }}
               >
                 <Avatar
-                  src={{{cookiecutter.entity_name_lowercase}}.avatar}
+                  src={ {{cookiecutter.entity_name_lowercase}}.avatar}
                   sx={{
                     height: 64,
                     mr: 2,
@@ -127,7 +127,7 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
                   {getInitials({{cookiecutter.entity_name_lowercase}}.name)}
                 </Avatar>
                 <div>
-                  <Typography variant="h4">{{{cookiecutter.entity_name_lowercase}}.email}</Typography>
+                  <Typography variant="h4">{ {{cookiecutter.entity_name_lowercase}}.email}</Typography>
                   <Box
                     sx={{
                       display: "flex",
@@ -137,7 +137,7 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
                   {% raw %}
                   <Typography variant="subtitle2" sx={{ mr: 1 }}>user_id:</Typography>
                   {% endraw %}
-                    <Chip label={{{cookiecutter.entity_name_lowercase}}.id} size="small" />
+                    <Chip label={ {{cookiecutter.entity_name_lowercase}}.id} size="small" />
                   </Box>
                 </div>
               </Grid>
@@ -184,13 +184,13 @@ const {{cookiecutter.entity_name}}Details: NextPage = () => {
               <Grid item xs={12}>
                 {% endraw %}
                   <{{cookiecutter.entity_name}}BasicDetails
-                    address1={{{cookiecutter.entity_name_lowercase}}.address1}
-                    address2={{{cookiecutter.entity_name_lowercase}}.address2}
-                    country={{{cookiecutter.entity_name_lowercase}}.country}
-                    email={{{cookiecutter.entity_name_lowercase}}.email}
+                    address1={ {{cookiecutter.entity_name_lowercase}}.address1}
+                    address2={ {{cookiecutter.entity_name_lowercase}}.address2}
+                    country={ {{cookiecutter.entity_name_lowercase}}.country}
+                    email={ {{cookiecutter.entity_name_lowercase}}.email}
                     isVerified={!!{{cookiecutter.entity_name_lowercase}}.isVerified}
-                    phone={{{cookiecutter.entity_name_lowercase}}.phone}
-                    state={{{cookiecutter.entity_name_lowercase}}.state}
+                    phone={ {{cookiecutter.entity_name_lowercase}}.phone}
+                    state={ {{cookiecutter.entity_name_lowercase}}.state}
                   />
                 </Grid>
                 <Grid item xs={12}>
