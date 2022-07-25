@@ -57,6 +57,7 @@ export const {{cookiecutter.entity_name}}Payment: FC = (props) => {
         />
       </PropertyList>
       <Divider />
+      {% raw %}
       <CardActions
         sx={{
           flexWrap: 'wrap',
@@ -64,6 +65,7 @@ export const {{cookiecutter.entity_name}}Payment: FC = (props) => {
           py: 2,
           m: -1
         }}
+        {% endraw %}
       >
                                     {% raw %}
 
