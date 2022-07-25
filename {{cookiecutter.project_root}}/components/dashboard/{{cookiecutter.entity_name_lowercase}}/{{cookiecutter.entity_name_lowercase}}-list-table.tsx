@@ -163,21 +163,26 @@ export const {{cookiecutter.entity_name}}ListTable: FC<{{cookiecutter.entity_nam
                       )}
                       value={is{{cookiecutter.entity_name}}Selected}
                     />
-                  </TableCell>
-                  <TableCell>
+            </TableCell>
+            
+            <TableCell>
+              {% raw %}
                     <Box
                       sx={{
                         alignItems: 'center',
                         display: 'flex'
                       }}
-                    >
+              >
+                {% endraw %}
                       <Avatar
-                        src={{{cookiecutter.entity_name_lowercase}}.avatar}
+                  src={ {{cookiecutter.entity_name_lowercase}}.avatar}
+              {% raw %}
                         sx={{
                           height: 42,
                           width: 42
                         }}
                       >
+              {% endraw %}
                         {getInitials({{cookiecutter.entity_name_lowercase}}.name)}
               </Avatar>
                                           {% raw %}
