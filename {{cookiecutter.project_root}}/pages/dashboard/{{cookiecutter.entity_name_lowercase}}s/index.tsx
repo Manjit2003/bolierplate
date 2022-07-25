@@ -302,13 +302,14 @@ const {{cookiecutter.entity_name}}List: NextPage = () => {
                 </Button>
               </Grid>
             </Grid>
+           {% raw %}
             <Box
               sx={{
                 m: -1,
                 mt: 3,
               }}
             >
-              {% raw %}
+              
               <Button startIcon={<UploadIcon fontSize="small" />} sx={{ m: 1 }}>
                 Import
               </Button>
