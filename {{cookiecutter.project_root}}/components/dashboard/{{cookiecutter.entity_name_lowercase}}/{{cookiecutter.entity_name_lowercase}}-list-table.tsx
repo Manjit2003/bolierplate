@@ -198,30 +198,30 @@ export const {{cookiecutter.entity_name}}ListTable: FC<{{cookiecutter.entity_nam
                             color="inherit"
                             variant="subtitle2"
                           >
-                            {{{cookiecutter.entity_name_lowercase}}.name}
+                            { {{cookiecutter.entity_name_lowercase}}.name}
                           </Link>
                         </NextLink>
                         <Typography
                           color="textSecondary"
                           variant="body2"
                         >
-                          {{{cookiecutter.entity_name_lowercase}}.email}
+                          { {{cookiecutter.entity_name_lowercase}}.email}
                         </Typography>
                       </Box>
                     </Box>
                   </TableCell>
                   <TableCell>
-                    {`${{{cookiecutter.entity_name_lowercase}}.city}, ${{{cookiecutter.entity_name_lowercase}}.state}, ${{{cookiecutter.entity_name_lowercase}}.country}`}
+                    {`${ {{cookiecutter.entity_name_lowercase}}.city}, ${ {{cookiecutter.entity_name_lowercase}}.state}, ${ {{cookiecutter.entity_name_lowercase}}.country}`}
                   </TableCell>
                   <TableCell>
-                    {{{cookiecutter.entity_name_lowercase}}.totalOrders}
+                    { {{cookiecutter.entity_name_lowercase}}.totalOrders}
                   </TableCell>
                   <TableCell>
                     <Typography
                       color="success.main"
                       variant="subtitle2"
                     >
-                      {numeral({{cookiecutter.entity_name_lowercase}}.totalAmountSpent).format(`${{{cookiecutter.entity_name_lowercase}}.currency}0,0.00`)}
+                      {numeral({{cookiecutter.entity_name_lowercase}}.totalAmountSpent).format(`${ {{cookiecutter.entity_name_lowercase}}.currency}0,0.00`)}
                     </Typography>
                   </TableCell>
                   <TableCell align="right">
@@ -250,7 +250,7 @@ export const {{cookiecutter.entity_name}}ListTable: FC<{{cookiecutter.entity_nam
       </Scrollbar>
       <TablePagination
         component="div"
-        count={{{cookiecutter.entity_name_lowercase}}sCount}
+        count={ {{cookiecutter.entity_name_lowercase}}sCount}
         onPageChange={onPageChange}
         onRowsPerPageChange={onRowsPerPageChange}
         page={page}
