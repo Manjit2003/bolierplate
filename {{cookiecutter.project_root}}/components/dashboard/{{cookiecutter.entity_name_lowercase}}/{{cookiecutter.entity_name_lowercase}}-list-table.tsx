@@ -145,13 +145,13 @@ export const {{cookiecutter.entity_name}}ListTable: FC<{{cookiecutter.entity_nam
             </TableRow>
           </TableHead>
           <TableBody>
-            {{{cookiecutter.entity_name_lowercase}}s.map(({{cookiecutter.entity_name_lowercase}}) => {
+            { {{cookiecutter.entity_name_lowercase}}s.map(({{cookiecutter.entity_name_lowercase}}) => {
               const is{{cookiecutter.entity_name}}Selected = selected{{cookiecutter.entity_name}}s.includes({{cookiecutter.entity_name_lowercase}}.id);
 
               return (
                 <TableRow
                   hover
-                  key={{{cookiecutter.entity_name_lowercase}}.id}
+                  key={ {{cookiecutter.entity_name_lowercase}}.id}
                   selected={is{{cookiecutter.entity_name}}Selected}
                 >
                   <TableCell padding="checkbox">
